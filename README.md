@@ -1,17 +1,19 @@
 #Installation
 
-1.Clone the repository
-
+1. Clone the repository
 Open your terminal and run the following command:
 ```
 git clone https://github.com/afrajwho/AI-Resume_Builder.git
 ```
+
+
 2. Navigate to the project directory
 ```
 cd AI-Resume Builder
 ```
 
-3. Install Node.js
+
+3. Install Node.js 
 
 4. Install the required dependencies
 
