@@ -1,46 +1,39 @@
-#Installation
+# Installation
 
-1. Clone the repository
-Open your terminal and run the following command:
-```
-git clone https://github.com/afrajwho/AI-Resume_Builder.git
-```
+Follow the steps below to install and setup the project:
 
+1. **Clone the repository**
 
-2. Navigate to the project directory
-```
-cd AI-Resume Builder
-```
+   Open your terminal and run the following command:
 
+   ```bash
+   git clone https://github.com/afrajwho/AI-Resume_Builder.git
+   ```
 
-3. Install Node.js 
+2. **Install Node.js**
 
-4. Install the required dependencies
+   The project requires Node.js version 13.4.19 or later. You can download it from [here](https://nodejs.org/en/download/).
 
-Run the following command to install all the required dependencies:
+3. **Install the required dependencies**
 
-```
-npm install
-```
+   Run the following command to install all the required dependencies:
 
-5. Setup environment variables
+   ```bash
+   npm install
+   ```
 
-Create a .env file in the root directory of your project and add the required environment variables.
+   This will install all the dependencies listed in the `package.json` file, including Next.js, React, React DOM, Axios, Stripe, Tailwind CSS, and other specific dependencies such as "@aws-sdk/client-s3" and "@clerk/nextjs".
 
-6. Run the project
+4. **Setup environment variables**
 
-Now, you can run the project using the following command:
+    Create a `.env` file in the root directory of your project and add the required environment variables.
 
-```
-npm run dev
-```
-Open http://localhost:3000 with your browser to see the result.
+5. **Run the project**
 
-# React + Vite
+    Now, you can run the project using the following command:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    ```bash
+    npm run dev
+    ```
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
