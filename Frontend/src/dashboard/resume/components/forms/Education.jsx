@@ -13,17 +13,20 @@ function Education() {
   const [loading,setLoading]=useState(false);
   const {resumeInfo,setResumeInfo}=useContext(ResumeInfoContext);
   const params=useParams();
-  const [educationalList, setEducationalList] = useState(
-    resumeInfo?.education || [{
-      universityName: '',
-      degree: '',
-      major: '',
-      startDate: '',
-      endDate: '',
-      description: ''
-    }]
-  );
+  const [educationalList,setEducationalList]=useState([
+    {
+      universityName:'',
+      degree:'',
+      major:'',
+      startDate:'',
+      endDate:'',
+      description:''
+    }
+  ])
 
+  useEffect(()=>{
+    resumeInfo&&setEducationalList(resumeInfo?.education)
+  },[])
   const handleChange=(event,index)=>{
     const newEntries=educationalList.slice();
     const {name,value}=event.target;
@@ -66,20 +69,20 @@ function Education() {
 
   }
 
-  useEffect(() => {
+  useEffect(()=>{
     setResumeInfo({
       ...resumeInfo,
-      education: educationalList
+      education:educationalList
     })
-  }, [educationalList, setResumeInfo, resumeInfo])
+  },[educationalList])
   return (
     <div className='p-5 shadow-lg rounded-lg border-t-primary border-t-4 mt-10'>
     <h2 className='font-bold text-lg'>Education</h2>
     <p>Add Your educational details</p>
 
     <div>
-      {educationalList?.map((item,index)=>(
-        <div key={index}>
+      {educationalList.map((item,index)=>(
+        <div>
           <div className='grid grid-cols-2 gap-3 border p-3 my-5 rounded-lg'>
             <div className='col-span-2'>
               <label>University Name</label>
